@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" onclick="playAudio()" name="" id="btn" class="btn" />
+    <div class="box">
+      <h1>Haloo Vanyaa ❤️</h1>
+	  <p>Hai Anyaa kamu semangat ya, cepet sembuh terus jangan begadang dan nangis terus terusan dan makasih ya masih ada untuk aku</p>
+      <br>
+	  <p>Ini hadiah dari aku walaupun ga bagus bagus banget tapi cuma ini yang bisa aku kasih sekarang hehehe...</p>
+	  <label for="btn">Close</label>
+    </div>
+	<video autoplay muted loop>
+		<source src="background.mp4" type="video/mp4">
+		<source src="video-background.webm" type="video/webm">
+	</video>
+    <audio id="myAudio">
+      <source src="herewithme.mp3" type="audio/mpeg">
+    </audio>
+	<script>
+		var x = document.getElementById("myAudio");
+
+		function playAudio() {
+			x.play();
+		}
+	</script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFB6C1;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font-weight: lighter;
+  z-index: 2
+}
+
+.box {
+  width: 390px;
+  height: 360px;
+  background: #FF69B4;
+  color: white;
+  border-radius: 45px;
+  position: absolute;
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.4s;
+  z-index: 2
+}
+
+.btn:checked ~ .box {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+.box p {
+  font-size: 10x;
+  font-weight: bolder;
+  text-align:center;
+}
+
+.box h1 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.box label {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DA70D6;
+  color: #FAAFBA;
+  margin-top: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 6px #ec4ae7;
+  transition: all 0.4s;
+}
+
+label:hover {
+  box-shadow: 0px 0px 30px #fff;
+}
+
+.btn:before {
+  content: "OPEN";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #DA70D6;
+  border-radius: 10px;
+  color: #FAAFBA;
+  z-index: -20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0px 6px #ec4ae7;
+  transition: all 0.4s;
+}
+
+.btn:hover::before {
+  box-shadow: 0px 0px 30px #ec4ae7;
+}
